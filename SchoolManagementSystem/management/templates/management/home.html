@@ -1,0 +1,25 @@
+{% extends 'management/homebase.html' %}
+ {% block content %}
+        <div style="text-align:center"><h1>Hello {{username | title}}</h1></div>
+        <table class="mdl-data-table mdl-shadow--2dp" style="margin:auto;margin-top:2%;">
+  <thead>
+    <tr>
+      <th style="text-align:left!important">Faculty Name</th>
+      <th style="text-align:left!important">Email</th>
+      <th style="text-align:left!important">Subject</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for param in params %}
+    <tr>
+      <td style="text-align:left!important">{{param.first_name}} {{param.last_anme}}</td>
+      <td style="text-align:left!important">{{param.email}}</td>
+      <td style="text-align:left!important">Hindi</td>
+    </tr>
+    {% endfor %}
+   
+    
+  </tbody>
+</table>
+        
+        {% endblock %}
